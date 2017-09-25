@@ -26,7 +26,7 @@ namespace XamarinApp
                 {
                     new NavigationPage(new ItemsPage())
                     {
-                        Title = "Browse",
+                        Title = "Browse Data",
                         Icon = Xamarin.Forms.Device.OnPlatform("tab_feed.png",null,null)
                     },
                     new NavigationPage(new AboutPage())
