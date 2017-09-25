@@ -28,7 +28,7 @@ namespace XamarinApp
                     },
                     new NavigationPage(new AboutPage())
                     {
-                        Title = "About",
+                        Title = "About1",
                         Icon = Device.OnPlatform("tab_about.png",null,null)
                     },
                 }
