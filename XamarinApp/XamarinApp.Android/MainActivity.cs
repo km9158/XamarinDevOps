@@ -18,5 +18,7 @@ namespace XamarinApp.Droid
 
             LoadApplication(new App());
         }
+
+
     }
 }

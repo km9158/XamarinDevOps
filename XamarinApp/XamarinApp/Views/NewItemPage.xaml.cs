@@ -3,6 +3,7 @@
 using XamarinApp.Models;
 
 using Xamarin.Forms;
+using Microsoft.Azure.Mobile.Analytics;
 
 namespace XamarinApp.Views
 {
@@ -26,6 +27,7 @@ namespace XamarinApp.Views
         async void Save_Clicked(object sender, EventArgs e)
         {
             MessagingCenter.Send(this, "AddItem", Item);
+            Analytics.TrackEvent("Item Added");
             await Navigation.PopToRootAsync();
         }
     }

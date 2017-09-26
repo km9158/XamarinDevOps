@@ -2,6 +2,7 @@
 using XamarinApp.ViewModels;
 
 using Xamarin.Forms;
+using Microsoft.Azure.Mobile.Analytics;
 
 namespace XamarinApp.Views
 {
@@ -18,7 +19,7 @@ namespace XamarinApp.Views
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
-
+            Analytics.TrackEvent("Item Details");
             BindingContext = this.viewModel = viewModel;
         }
     }

@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.Azure.Mobile.Analytics;
 using Xamarin.Forms;
 
 namespace XamarinApp.Views
@@ -7,6 +8,7 @@ namespace XamarinApp.Views
     {
         public AboutPage()
         {
+            Analytics.TrackEvent("About Us");
             InitializeComponent();
         }
     }

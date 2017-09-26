@@ -4,6 +4,7 @@ using XamarinApp.Models;
 using XamarinApp.ViewModels;
 
 using Xamarin.Forms;
+using Microsoft.Azure.Mobile.Analytics;
 
 namespace XamarinApp.Views
 {
@@ -38,9 +39,11 @@ namespace XamarinApp.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            Analytics.TrackEvent("Items Page OnAppearing");
+            throw new Exception("Boom goes the dynamite");
 
-            if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
+            //if (viewModel.Items.Count == 0)
+            //    viewModel.LoadItemsCommand.Execute(null);
         }
     }
 }
