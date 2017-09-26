@@ -40,10 +40,10 @@ namespace XamarinApp.Views
         {
             base.OnAppearing();
             Analytics.TrackEvent("Items Page OnAppearing");
-            throw new Exception("Boom goes the dynamite");
+            //throw new Exception("Boom goes the dynamite");
 
-            //if (viewModel.Items.Count == 0)
-            //    viewModel.LoadItemsCommand.Execute(null);
+            if (viewModel.Items.Count == 0)
+                viewModel.LoadItemsCommand.Execute(null);
         }
     }
 }
