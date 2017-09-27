@@ -24,6 +24,7 @@ namespace XamarinApp.Views
             {
                 Analytics.SetEnabledAsync(true);
             }
+            DisplayAlert("Item Details", isEnabled.ToString(), "Ok");
             Analytics.TrackEvent("Item Details");
             BindingContext = this.viewModel = viewModel;
         }

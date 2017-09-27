@@ -46,7 +46,7 @@ namespace XamarinApp.Views
             }
             Analytics.TrackEvent("Items Page OnAppearing");
 
-
+            DisplayAlert("OnAppearing", isEnabled.ToString(), "Ok");
 
             //throw new Exception("Boom goes the dynamite");
 

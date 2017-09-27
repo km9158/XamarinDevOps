@@ -33,7 +33,7 @@ namespace XamarinApp.Views
                 Analytics.SetEnabledAsync(true);
             }
             Analytics.TrackEvent("Item Added");
-
+            DisplayAlert("AddItem", isEnabled.ToString(), "Ok");
 
 
             await Navigation.PopToRootAsync();
