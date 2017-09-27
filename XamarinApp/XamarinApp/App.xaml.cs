@@ -42,6 +42,7 @@ namespace XamarinApp
         {
             MobileCenter.Start("android=3d714e48-190e-418f-91fb-57de609ac477",
                    typeof(Analytics), typeof(Crashes));
+            Analytics.SetEnabledAsync(true);
         }
 
         

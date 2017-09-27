@@ -27,7 +27,15 @@ namespace XamarinApp.Views
         async void Save_Clicked(object sender, EventArgs e)
         {
             MessagingCenter.Send(this, "AddItem", Item);
-          //  Analytics.TrackEvent("Item Added");
+            bool isEnabled = Analytics.IsEnabledAsync().Result;
+            if (!isEnabled)
+            {
+                Analytics.SetEnabledAsync(true);
+            }
+            Analytics.TrackEvent("Item Added");
+
+
+
             await Navigation.PopToRootAsync();
         }
     }

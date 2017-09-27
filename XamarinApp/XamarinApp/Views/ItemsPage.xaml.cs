@@ -39,7 +39,15 @@ namespace XamarinApp.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            bool isEnabled = Analytics.IsEnabledAsync().Result;
+            if (!isEnabled)
+            {
+                Analytics.SetEnabledAsync(true);
+            }
             Analytics.TrackEvent("Items Page OnAppearing");
+
+
+
             //throw new Exception("Boom goes the dynamite");
 
             if (viewModel.Items.Count == 0)

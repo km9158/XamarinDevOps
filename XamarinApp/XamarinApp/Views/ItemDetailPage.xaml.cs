@@ -19,6 +19,11 @@ namespace XamarinApp.Views
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
+            bool isEnabled = Analytics.IsEnabledAsync().Result;
+            if (!isEnabled)
+            {
+                Analytics.SetEnabledAsync(true);
+            }
             Analytics.TrackEvent("Item Details");
             BindingContext = this.viewModel = viewModel;
         }
